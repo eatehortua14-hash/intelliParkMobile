@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-title>IntelliPark</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        Salir
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card>
+
+    <ion-card-header>
+
+      <ion-card-title>
+        Bienvenido, {{ user()?.user_first_name }}
+      </ion-card-title>
+
+      <ion-card-subtitle>
+        Operación del parqueadero
+      </ion-card-subtitle>
+
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-button
+        expand="block"
+        size="large"
+        routerLink="/vehicle-entry"
+      >
+        Registrar vehículo
+      </ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ayuda al operador</ion-card-title>
+      <ion-card-subtitle>
+        Uso de IntelliPark
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>
+        Para registrar un vehículo, pulsa
+        <strong>Registrar vehículo</strong> y completa
+        los datos solicitados.
+      </p>
+
+      <p>
+        Revisa la placa antes de enviar el formulario
+        y comprueba el mensaje de confirmación.
+      </p>
+
+      <p>
+        Al terminar tu trabajo, pulsa
+        <strong>Salir</strong> para cerrar la sesión.
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
